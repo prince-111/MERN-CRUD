@@ -77,11 +77,10 @@ const Home = () => {
                 value={inputUser.name}
                 onChange={handleChnage}
               />
+            
             </div>
             <div className="mt-3">
-              <label className=" text-gray-800 text-md font-bold  ">
-                Email
-              </label>
+              <label className=" text-gray-800 text-md font-bold  ">Email</label>
               <input
                 type="text"
                 name="email"
@@ -94,9 +93,7 @@ const Home = () => {
             </div>
 
             <div className="mt-3">
-              <label className="text-gray-800 text-md font-bold ">
-                Password
-              </label>
+              <label className="text-gray-800 text-md font-bold ">Password</label>
               <input
                 type="password"
                 name="password"

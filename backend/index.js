@@ -1,13 +1,17 @@
 const express = require("express");
+const cors = require("cors");
 const connectDB = require("./config/dbConn");
 const userRoutes = require("./routes/userRoutes")
 
 const app = express();
 const PORT = process.env.PORT || 8000;
 
-app.get("/", function (req, res) {
-    res.send("Hello World");
-});
+app.use(cors());
+app.use(express.json());
+
+// app.get("/", function (req, res) {
+//     res.send("Hello World");
+// });
 
 connectDB();
 

@@ -2,7 +2,7 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 
-const User = () => {
+const ReadUser = () => {
   const { id } = useParams();
   // data fetching all
   const [userData, setUserData] = useState([]);
@@ -58,4 +58,4 @@ const User = () => {
   );
 };
 
-export default User;
+export default ReadUser;

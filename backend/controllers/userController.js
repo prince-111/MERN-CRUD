@@ -36,7 +36,7 @@ exports.readAllUsers = async (req, res) => {
 exports.readUserById = async (req, res) => {
   try {
     const id = req.params.id;
-    const user = await User.findById({ _id: id });
+    const user = await User.findById(id);
     res.send(user);
   } catch (error) {
     res.send(error);
@@ -47,7 +47,7 @@ exports.readUserById = async (req, res) => {
 exports.updateUser = async (req, res) => {
   try {
     const id = req.params.id;
-    const user = await User.findByIdAndUpdate({ _id: id }, req.body, {
+    const user = await User.findByIdAndUpdate(id, req.body, {
       new: true,
     });
     res.send(user);
@@ -60,7 +60,7 @@ exports.updateUser = async (req, res) => {
 exports.deleteUser = async (req, res) => {
   try {
     const id = req.params.id;
-    const user = await User.findByIdAndDelete({ _id: id });
+    const user = await User.findByIdAndDelete(id);
     res.send(user);
   } catch (error) {
     res.send(error);
